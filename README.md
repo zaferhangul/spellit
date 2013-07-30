@@ -12,6 +12,9 @@ spellit is a nonsensical spelling plugin.
 	$("#word").spellit({effect:'scaleMin',timeout:25});
 	// Sample 5
 	$("#word").spellit({effect:'starWars'});
+	
+## Demo
+http://www.zaferhangul.com/spellit
 
 ## Configuration Options
 | Option           |  Default                             |  Description                                               |
