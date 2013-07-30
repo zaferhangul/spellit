@@ -21,6 +21,9 @@ spellit is a nonsensical spelling plugin.
 ## Demo
 http://www.zaferhangul.com/spellit
 
+## Features
+Coming soon...
+
 ## Configuration Options
 | Option           |  Default                             |  Description                                               |
 |------------------|--------------------------------------|------------------------------------------------------------|
