@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Spell It! - Zafer Hangül</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.spellit.js"></script>
+		<link type="text/css" href="jquery.spellit.css" rel="stylesheet" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$("#word").spellit({effect:'rotate'});
+	
+	$("#efekt1").click(function(){
+		$("#word").text($("#txb").val());
+		$("#word").spellit();
+	});
+	$("#efekt2").click(function(){
+		$("#word").text($("#txb").val());
+		$("#word").spellit({effect:'starWars'});
+	});
+	$("#efekt3").click(function(){
+		$("#word").text($("#txb").val());
+		$("#word").spellit({effect:'scaleMin',timeout:25});
+	});
+	$("#efekt4").click(function(){
+		$("#word").text($("#txb").val());
+		$("#word").spellit({effect:'scaleBig'});
+	});
+	$("#efekt5").click(function(){
+		$("#word").text($("#txb").val());
+		$("#word").spellit({effect:'rotate'});
+	});
+	
+	
+});	  
+
+</script>
+<style>
+body {font-family:Verdana;font-size:15px;}
+a {font-size:19px;line-height:22px;}
+.container {
+text-align: center;
+}
+.container #word {line-height:150px;}
+#word {
+font-weight: bold;
+font-size: 50px;
+font-family: Tahoma;
+}
+i {font-style:normal;}
+.box {border:1px solid #ccc;padding:10px;width}
+#txb {line-height:25px;width:500px;padding-left:10px;}
+</style>
+</head>
+<body>
+
+
+
+
+
+<div class="container">
+
+<div id="word">
+
+	Ağ partiliyiz, Ağ partili!! Hüloooğğğğ...
+	
+</div>
+	
+	<label>Metin buraya: </label><input type="text" id="txb" value="Buraya istediğini yaz..." />
+	<div style="height:50px;"></div>
+	<div class="box"><input type="submit" id="efekt1" value="Default" /><br /><i>$("#word").spellit();</i></div>
+	<div class="box"><input type="submit" id="efekt4" value="effect:'scaleBig'" /></a><br /><i>$("#word").spellit({effect:'scaleBig'});</i></div>
+	<div class="box"><input type="submit" id="efekt2" value="effect:'starWars'" /></a><br /><i>$("#word").spellit({effect:'starWars'});</i></div>
+	<div class="box"><input type="submit" id="efekt3" value="effect:'scaleMin'" /></a><br /><i>$("#word").spellit({effect:'scaleMin',timeout:25});</i></div>
+	<div class="box"><input type="submit" id="efekt5" value="effect:'rotate'" /></a><br /><i>$("#word").spellit({effect:'rotate'});</i></div>
+
+	
+	</div>
+
+
+
+	</body></html>
+
+
