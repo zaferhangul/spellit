@@ -2,12 +2,13 @@
 spellit is a nonsensical spelling plugin.
 
 ## Example usages
-  // Sample 1
+
+  	// Sample 1
 	$("#word").spellit();
-	<br />
+	
 	// Sample 2
 	$("#word").spellit({effect:'rotate'});
-	\n
+	
 	// Sample 3
 	$("#word").spellit({effect:'scaleBig'});
 	
