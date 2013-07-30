@@ -4,12 +4,16 @@ spellit is a nonsensical spelling plugin.
 ## Example usages
   // Sample 1
 	$("#word").spellit();
+	<br />
 	// Sample 2
 	$("#word").spellit({effect:'rotate'});
+	\n
 	// Sample 3
 	$("#word").spellit({effect:'scaleBig'});
+	
 	// Sample 4
 	$("#word").spellit({effect:'scaleMin',timeout:25});
+	
 	// Sample 5
 	$("#word").spellit({effect:'starWars'});
 	
