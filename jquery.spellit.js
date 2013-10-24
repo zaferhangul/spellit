@@ -24,7 +24,7 @@
 			//console.log(str);
 			var firstLength = str.length;
 			resultArray=[];
-			var opener = "<"+defaults.element+" class="+defaults.effect+">";
+			var opener = "<"+defaults.element+" class='spellElem "+defaults.effect+"'>";
 			var closer = "</"+defaults.element+">";
 			
 				for(var i=0;i<firstLength;i++){
