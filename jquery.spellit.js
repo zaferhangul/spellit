@@ -11,7 +11,7 @@
 				timeout:40,
 				effect: '', // scaleMin - scaleBig - starWars - rotate
 				//loop: 0,
-				element: 'span' 
+				element: 'em' 
 
 			};
 			
