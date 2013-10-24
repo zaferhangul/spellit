@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>Spell It! - Zafer Hangül</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
 		<script type="text/javascript" src="jquery.spellit.js"></script>
 		<link type="text/css" href="jquery.spellit.css" rel="stylesheet" />
 
 <script type="text/javascript">
 
+function getVal() {
+	var val = $("#txb").val();
+	if(val=="") {
+		val = "Beşiktaş'ım oley oleeeyyy..."
+	}
+	return val;
+}
 $(document).ready(function() {
-
+	$("#txb").focus();
+	
 	$("#word").spellit({effect:'rotate'});
 	
 	$("#efekt1").click(function(){
-		$("#word").text($("#txb").val());
+		$("#word").text(getVal());
 		$("#word").spellit();
 	});
 	$("#efekt2").click(function(){
-		$("#word").text($("#txb").val());
+		$("#word").text(getVal());
 		$("#word").spellit({effect:'starWars'});
 	});
 	$("#efekt3").click(function(){
-		$("#word").text($("#txb").val());
+		$("#word").text(getVal());
 		$("#word").spellit({effect:'scaleMin',timeout:25});
 	});
 	$("#efekt4").click(function(){
-		$("#word").text($("#txb").val());
+		$("#word").text(getVal());
 		$("#word").spellit({effect:'scaleBig'});
 	});
 	$("#efekt5").click(function(){
-		$("#word").text($("#txb").val());
+		$("#word").text(getVal());
 		$("#word").spellit({effect:'rotate'});
 	});
 	
@@ -41,18 +51,15 @@ $(document).ready(function() {
 <style>
 body {font-family:Verdana;font-size:15px;}
 a {font-size:19px;line-height:22px;}
-.container {
-text-align: center;
-}
+em {font-style:normal;}
+.container {text-align: center;}
 .container #word {line-height:150px;}
-#word {
-font-weight: bold;
-font-size: 50px;
-font-family: Tahoma;
-}
+#word {font-weight: bold;font-size: 50px;font-family: Tahoma;}
 i {font-style:normal;}
 .box {border:1px solid #ccc;padding:10px;width}
-#txb {line-height:25px;width:500px;padding-left:10px;}
+#txb {line-height:25px;padding-left:10px;margin:auto;}
+.container {margin-top:20px;}
+.show-grid [class^="col-"] {padding-top: 10px;padding-bottom: 10px;background-color: #EEE;border: 1px solid #DDD;}
 </style>
 </head>
 <body>
@@ -63,20 +70,25 @@ i {font-style:normal;}
 
 <div class="container">
 
-<div id="word">
+<div id="word" class="jumbotron">
 
 	Beşiktaş'ım oley oleeeyyy...
 	
 </div>
 	
-	<label>Metin buraya: </label><input type="text" id="txb" value="Buraya istediğini yaz..." />
+	<input type="text" id="txb" class="form-control" placeholder="Buraya istediğini yaz..." />
 	<div style="height:50px;"></div>
-	<div class="box"><input type="submit" id="efekt1" value="Default" /><br /><i>$("#word").spellit();</i></div>
-	<div class="box"><input type="submit" id="efekt4" value="effect:'scaleBig'" /></a><br /><i>$("#word").spellit({effect:'scaleBig'});</i></div>
-	<div class="box"><input type="submit" id="efekt2" value="effect:'starWars'" /></a><br /><i>$("#word").spellit({effect:'starWars'});</i></div>
-	<div class="box"><input type="submit" id="efekt3" value="effect:'scaleMin'" /></a><br /><i>$("#word").spellit({effect:'scaleMin',timeout:25});</i></div>
-	<div class="box"><input type="submit" id="efekt5" value="effect:'rotate'" /></a><br /><i>$("#word").spellit({effect:'rotate'});</i></div>
-
+	<div class="row show-grid">
+		<div class="col-md-6"><input type="submit" id="efekt1" value="Default" class="btn btn-primary btn-lg" /><br /><i>$("#word").spellit();</i></div>
+		<div class="col-md-6"><input type="submit" id="efekt4" value="effect:'scaleBig'" class="btn btn-warning btn-lg" /><br /><i>$("#word").spellit({effect:'scaleBig'});</i></div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-6"><input type="submit" id="efekt2" value="effect:'starWars'" class="btn btn-success btn-lg" /><br /><i>$("#word").spellit({effect:'starWars'});</i></div>
+		<div class="col-md-6"><input type="submit" id="efekt3" value="effect:'scaleMin'" class="btn btn-danger btn-lg" /><br /><i>$("#word").spellit({effect:'scaleMin',timeout:25});</i></div>
+	</div>
+	<div class="row show-grid">
+		<div class="col-md-6"><input type="submit" id="efekt5" value="effect:'rotate'" class="btn btn-info btn-lg" /><br /><i>$("#word").spellit({effect:'rotate'});</i></div>
+	</div>
 	
 	</div>
 
