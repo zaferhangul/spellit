@@ -43,7 +43,12 @@ $(document).ready(function() {
 		$("#word").text(getVal());
 		$("#word").spellit({effect:'rotate'});
 	});
-	
+	$("txb").focus(function(){
+		$("txb").val("");
+	});
+	$("txb").blur(function(){
+		$("txb").val("Buraya istediğini yaz...");
+	});
 	
 });	  
 
